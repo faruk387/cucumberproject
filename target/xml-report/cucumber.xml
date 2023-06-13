@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="78.36" tests="4" skipped="0" failures="0" errors="0">
+<testcase classname="customer_login" name="TC01_&lt;PositiveTest&gt;_customer_login_test - test_data - Example #1.1" time="20.929">
+<system-out><![CDATA[
+Given user_navigates to "https://www.bluerentalcars.com/"...................passed
+And user clicks on home page login button...................................passed
+And enter "sam.walker@bluerentalcars.com" and "c!fas_art"...................passed
+And capture the screenshot..................................................passed
+And click on login page login button........................................passed
+Then verify the default page is visible.....................................passed
+Then user logs out the application..........................................passed
+Then close the application..................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="customer_login" name="TC01_&lt;PositiveTest&gt;_customer_login_test - test_data - Example #1.2" time="19.236">
+<system-out><![CDATA[
+Given user_navigates to "https://www.bluerentalcars.com/"...................passed
+And user clicks on home page login button...................................passed
+And enter "kate.brown@bluerentalcars.com" and "tad1$Fas"....................passed
+And capture the screenshot..................................................passed
+And click on login page login button........................................passed
+Then verify the default page is visible.....................................passed
+Then user logs out the application..........................................passed
+Then close the application..................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="customer_login" name="TC01_&lt;PositiveTest&gt;_customer_login_test - test_data - Example #1.3" time="19.223">
+<system-out><![CDATA[
+Given user_navigates to "https://www.bluerentalcars.com/"...................passed
+And user clicks on home page login button...................................passed
+And enter "raj.khan@bluerentalcars.com" and "v7Hg_va^"......................passed
+And capture the screenshot..................................................passed
+And click on login page login button........................................passed
+Then verify the default page is visible.....................................passed
+Then user logs out the application..........................................passed
+Then close the application..................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="customer_login" name="TC01_&lt;PositiveTest&gt;_customer_login_test - test_data - Example #1.4" time="18.784">
+<system-out><![CDATA[
+Given user_navigates to "https://www.bluerentalcars.com/"...................passed
+And user clicks on home page login button...................................passed
+And enter "pam.raymond@bluerentalcars.com" and "Nga^g6!"....................passed
+And capture the screenshot..................................................passed
+And click on login page login button........................................passed
+Then verify the default page is visible.....................................passed
+Then user logs out the application..........................................passed
+Then close the application..................................................passed
+]]></system-out>
+</testcase>
+</testsuite>

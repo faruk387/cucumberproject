@@ -1,5 +1,6 @@
 package stepdefinitions;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -10,6 +11,9 @@ import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 import utilities.WaitUtils;
+
+import java.util.List;
+import java.util.Map;
 
 public class BlueRentalStepDefs {
     BRHomePage brHomePage=new BRHomePage();
@@ -46,5 +50,21 @@ brLoginPage.loginButton.click();
         WaitUtils.waitFor(1);
         brHomePage.OK.click();
         WaitUtils.waitFor(1);
+    }
+
+    @Given("user enters customer_email and customer_password")
+    public void user_enters_customer_email_and_customer_password(io.cucumber.datatable.DataTable credentials) {
+      //1.get the data as list<string>
+       // List<String> customerData= credentials.row(1);
+       // System.out.println(customerData); | jack@gmail.com | 12345    |
+//brLoginPage.userEmail.sendKeys(customerData.get(0));//jack@gmail.com
+//brLoginPage.userPass.sendKeys(customerData.get(1));//12345
+  //2. List<Map<String,String>>
+        List<Map<String,String>> customerData=credentials.asMaps(String.class,String.class);
+        System.out.println(customerData);//[{email=jack@gmail.com},{password=12345}]
+    for(Map<String,String> each: customerData){
+     brLoginPage.userEmail.sendKeys(each.get("email"));
+     brLoginPage.userPass.sendKeys(each.get("password"));
+    }
     }
 }

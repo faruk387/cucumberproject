@@ -1,0 +1,55 @@
+*****selenium grid notes*****
+Official Documentation : https://www.selenium.dev/documentation/grid/getting_started/
+-----Installation Steps:-----
+1. Prerequisites:
+*Java 11 or higher installed
+*Browser(s) installed
+*Browser driver(s)
+*Download the Selenium Server jar file from the latest release -NOT DONE YET
+2. Create a folder under project  :  SeleniumServer
+3. * Download the selenium server :  https://www.selenium.dev/downloads/
+   * Download the chrome driver   :  https://chromedriver.chromium.org/downloads
+   * Download the firefox driver  :  https://github.com/mozilla/geckodriver/releases
+   NOTE: move those files in the SeleniumServer folder then UNZIP
+-----run the grid----
+4. Open terminal(MAC) or CMD(WINDOWS) and change directory to the SeleniumServer folder
+   To find the path : right click on the SeleniumServer folder > copy path/reference > copy absolute path
+   To change directory : cd path_of_SeleniumServer folder
+   For me : cd /Users/techproed/IdeaProjects/mycucumberproject/SeleniumServer
+5. Run the grid standalone server
+   --->>>  java -jar selenium-server-4.10.0.jar standalone
+   Then you should see this message : Started Selenium Standalone 4.10.0 (revision c14d967899): http://192.168.1.66:4444
+   Now the hub and node runs and we are able to run the tests on grid....
+   To close the server : Control + c
+   To start the server : java -jar selenium-server-4.10.0.jar standalone
+   To start the server WIND 4.8.0 : java -jar selenium-server-4.8.0.jar standalone
+TROUBLESHOOTING :
+   NOTES : if 4.10.0 is not working
+   1. put 4.8.0 in SeleniumServer folder
+   2. in your terminal close the previous session (Control +C)
+   3. run this on the terminal : java -jar selenium-server-4.8.0.jar standalone
+   4. run your runner one more time
+6. Create feature a new feature file:
+   grid_test_case.feature
+7. Complete the step definitions. Make sure to use RemoteWebDriver
+++++++++++++++++++DONE+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+*What is selenium grid?
+   -One of the selenium components. (RC,WebDriver,Grid,IDE)
+*What is it used for?(can be answered on the first question)
+-It is used to run test cases
+    -on remote web driver
+    -for cross-browser testing(chrome,firefox,safari,edge...)
+    -for parallel testing(normal framework should be configured for parallel testing for example, testng parallel testing with xml files,..)
+    -for running on different operating systems(IOS, windows)
+*Did you use selenium grid?
+    -yes I used in my project for cross browser testing
+*How do you run tests on grid?
+    -I use selenium server, and drivers in the same directory
+    -then we should run the server. I use standalone mode : java -jar selenium-server-4.8.0.jar standalone
+    -with grid 4, we have options to run 1. standalone mode. 2. distributed mode. 3. using HUB and NODE(same as grid 3)
+*What is HUB?
+    -Hub is the server that managed the nodes. we can have singe hub
+    java -jar selenium-server-<version>.jar hub
+*What is NODE?
+    -node is the remote virtual machines. we can have multiple nodes
+    java -jar selenium-server-<version>.jar node

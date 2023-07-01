@@ -1,51 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="78.36" tests="4" skipped="0" failures="0" errors="0">
-<testcase classname="customer_login" name="TC01_&lt;PositiveTest&gt;_customer_login_test - test_data - Example #1.1" time="20.929">
+<testsuite name="Cucumber" time="5.592" tests="4" skipped="0" failures="0" errors="0">
+<testcase classname="db_testing" name="TC03_verify_customer_account_types - Example #1.1" time="1.549">
 <system-out><![CDATA[
-Given user_navigates to "https://www.bluerentalcars.com/"...................passed
-And user clicks on home page login button...................................passed
-And enter "sam.walker@bluerentalcars.com" and "c!fas_art"...................passed
-And capture the screenshot..................................................passed
-And click on login page login button........................................passed
-Then verify the default page is visible.....................................passed
-Then user logs out the application..........................................passed
-Then close the application..................................................passed
+Given user connects to the application database.............................passed
+And user gets the column "*" from the table "tp_account"....................passed
+Then verify table "tp_account" and column "account_type" contains the data "CREDIT_CARD".passed
 ]]></system-out>
 </testcase>
-<testcase classname="customer_login" name="TC01_&lt;PositiveTest&gt;_customer_login_test - test_data - Example #1.2" time="19.236">
+<testcase classname="db_testing" name="TC03_verify_customer_account_types - Example #1.2" time="1.275">
 <system-out><![CDATA[
-Given user_navigates to "https://www.bluerentalcars.com/"...................passed
-And user clicks on home page login button...................................passed
-And enter "kate.brown@bluerentalcars.com" and "tad1$Fas"....................passed
-And capture the screenshot..................................................passed
-And click on login page login button........................................passed
-Then verify the default page is visible.....................................passed
-Then user logs out the application..........................................passed
-Then close the application..................................................passed
+Given user connects to the application database.............................passed
+And user gets the column "*" from the table "tp_account"....................passed
+Then verify table "tp_account" and column "account_type" contains the data "SAVING".passed
 ]]></system-out>
 </testcase>
-<testcase classname="customer_login" name="TC01_&lt;PositiveTest&gt;_customer_login_test - test_data - Example #1.3" time="19.223">
+<testcase classname="db_testing" name="TC03_verify_customer_account_types - Example #1.3" time="1.351">
 <system-out><![CDATA[
-Given user_navigates to "https://www.bluerentalcars.com/"...................passed
-And user clicks on home page login button...................................passed
-And enter "raj.khan@bluerentalcars.com" and "v7Hg_va^"......................passed
-And capture the screenshot..................................................passed
-And click on login page login button........................................passed
-Then verify the default page is visible.....................................passed
-Then user logs out the application..........................................passed
-Then close the application..................................................passed
+Given user connects to the application database.............................passed
+And user gets the column "*" from the table "tp_account"....................passed
+Then verify table "tp_account" and column "account_type" contains the data "CHECKING".passed
 ]]></system-out>
 </testcase>
-<testcase classname="customer_login" name="TC01_&lt;PositiveTest&gt;_customer_login_test - test_data - Example #1.4" time="18.784">
+<testcase classname="db_testing" name="TC03_verify_customer_account_types - Example #1.4" time="1.253">
 <system-out><![CDATA[
-Given user_navigates to "https://www.bluerentalcars.com/"...................passed
-And user clicks on home page login button...................................passed
-And enter "pam.raymond@bluerentalcars.com" and "Nga^g6!"....................passed
-And capture the screenshot..................................................passed
-And click on login page login button........................................passed
-Then verify the default page is visible.....................................passed
-Then user logs out the application..........................................passed
-Then close the application..................................................passed
+Given user connects to the application database.............................passed
+And user gets the column "*" from the table "tp_account"....................passed
+Then verify table "tp_account" and column "account_type" contains the data "INVESTING".passed
 ]]></system-out>
 </testcase>
 </testsuite>
